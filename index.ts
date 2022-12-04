@@ -6,12 +6,11 @@ import cors from "cors";
 const nombre = 'Edgar Efraín Diaz Zhinin';
 console.log(`Mi nombre es: ${nombre}`);
 
-const server = new Server();
+const server = Server.instance;
 
 //BODYPARSE
 server.app.use(bodyParser.urlencoded({ extended: true }));
 server.app.use(bodyParser.json());
-
 
 // CORS
 server.app.use(cors({ origin: true, credentials: true }));
